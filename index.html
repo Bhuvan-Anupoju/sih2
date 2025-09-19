@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>Full Width Image Carousel</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+          alt="Logo"
+        />
+        <div class="nav-text">
+          <span>My Website</span>
+          <span>Learning never stops</span>
+        </div>
+      </div>
+    </nav>
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <div class="carousel-slide">
+          <img src="banners/AGRICULTURE.png" alt="Slide 1" />
+        </div>
+        <div class="carousel-slide">
+          <img src="banners/AGRICULTURE.png" alt="Slide 2" />
+        </div>
+        <div class="carousel-slide">
+          <img src="banners/AGRICULTURE.png" alt="Slide 3" />
+        </div>
+      </div>
+    </div>
+    <div class="weather-tips-wrapper">
+      <div class="wt-container">
+        <!-- Weather Card -->
+        <div class="wt-card wt-weather-card">
+          <h2 id="wt-location">Loading...</h2>
+          <div class="wt-today">
+            <span id="wt-temperature" class="wt-today-temp">--°C</span>
+            <span id="wt-emoji" class="wt-emoji">⛅</span>
+            <div id="wt-desc" class="wt-desc">--</div>
+          </div>
+          <div class="wt-forecast">
+            <div class="wt-forecast-day" id="wt-day1">Tomorrow: --°C, --</div>
+            <div class="wt-forecast-day" id="wt-day2">Day After: --°C, --</div>
+          </div>
+        </div>
+
+        <!-- Tip Card -->
+        <div class="wt-card wt-tip-card">
+          <div class="wt-tip-text">
+            <h3>Tip of the Day 🌱</h3>
+            <p>
+              Stay hydrated and carry a water bottle if it's sunny today. Proper
+              hydration boosts energy and focus!
+            </p>
+          </div>
+          <div class="wt-tip-img">
+            <img
+              src="https://images.unsplash.com/photo-1504544750208-dc0358e63f7f"
+              alt="Tip Image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2 style="margin: 20px" id="shows">Crop Manuals</h2>
+    <p style="margin: 20px; font-size: 14px; line-height: 2px" id="shows">
+      Learn set up, management & cultivation of crop
+    </p>
+    <div class="card-wrapper2">
+      <div class="card-container2">
+        <div class="card2">
+          <img src="crop manual/paddy 1.png" alt="Image 1" />
+        </div>
+        <div class="card2">
+          <img src="crop manual/sugar 1.png" alt="Image 2" />
+        </div>
+        <div class="card2">
+          <img src="crop manual/Mango Culture (3).png" alt="Image 3" />
+        </div>
+        <div class="card2">
+          <img src="crop manual/Corn Crop.png" alt="Image 4" />
+        </div>
+        <div class="card2">
+          <img src="crop manual/marigold.png" alt="Image 5" />
+        </div>
+        <div class="card2">
+          <img src="crop manual/Banana Culture (1).png" alt="Image 6" />
+        </div>
+        <div class="card2">
+          <img src="crop manual/okra crop.png" alt="Image 7" />
+        </div>
+        <div class="card2">
+          <img src="crop manual/Potato Culture (1).png" alt="Image 8" />
+        </div>
+        <div class="card2">
+          <img src="crop manual/Urad dal Crop.png" alt="Image 9" />
+        </div>
+        <div class="card2">
+          <img src="crop manual/tomato crop.png" alt="Image 10" />
+        </div>
+      </div>
+    </div>
+    <h2 style="margin: 20px" id="shows">Plant Diseases</h2>
+    <p style="margin: 20px; font-size: 14px; line-height: 2px" id="shows">
+      Understand diseases, precautions & treatments
+    </p>
+    <div class="card-wrapper">
+      <div class="card-container">
+        <div class="card">
+          <img src="plant esies/downy mildew.jpg" alt="Image 1" />
+          <h2>Downy Mildew</h2>
+        </div>
+        <div class="card">
+          <img src="plant esies/powder.jpg" alt="Image 2" />
+          <h2>Powder Mildew</h2>
+        </div>
+        <div class="card">
+          <img src="plant esies/two.jpg" alt="Image 3" />
+          <h2>Xanthomonas</h2>
+        </div>
+        <div class="card">
+          <img src="plant esies/rust.webp" alt="Image 4" />
+          <h2>Rust Desies</h2>
+        </div>
+        <div class="card">
+          <img src="plant esies/blight.webp" alt="Image 5" />
+          <h2>Blight</h2>
+        </div>
+        <div class="card">
+          <img src="plant esies/antha.webp" alt="Image 6" />
+          <h2>Anthracnose</h2>
+        </div>
+        <div class="card">
+          <img src="plant esies/craccc.webp" alt="Image 7" />
+          <h2>Canker Disease</h2>
+        </div>
+        <div class="card">
+          <img src="plant esies/galls.jpeg" alt="Image 7" />
+          <h2>Galls</h2>
+        </div>
+        <div class="card">
+          <img src="plant esies/root.webp" alt="Image 8" />
+          <h2>Root rot</h2>
+        </div>
+        <div class="card">
+          <img src="plant esies/stem.jpeg" alt="Image 9" />
+          <h2>Mosaic Virus</h2>
+        </div>
+        <div class="card">
+          <img src="plant esies/grey.png" alt="Image 10" />
+          <h2>Charcoal Rot</h2>
+        </div>
+      </div>
+    </div>
+    <h2 style="margin: 20px" id="shows">Magazines</h2>
+
+    <div class="card-wrapper2">
+      <div class="card-container2">
+        <div class="card3">
+          <img src="https://picsum.photos/id/1018/1920/600" alt="Image 1" />
+        </div>
+        <div class="card3">
+          <img src="https://picsum.photos/id/1018/1920/600" alt="Image 2" />
+        </div>
+        <div class="card3">
+          <img src="https://picsum.photos/id/1018/1920/600" alt="Image 3" />
+        </div>
+        <div class="card3">
+          <img src="https://picsum.photos/id/1018/1920/600" alt="Image 4" />
+        </div>
+        <div class="card3">
+          <img src="https://picsum.photos/id/1018/1920/600" alt="Image 5" />
+        </div>
+        <div class="card3">
+          <img src="https://picsum.photos/id/1018/1920/600" alt="Image 6" />
+        </div>
+        <div class="card3">
+          <img src="https://picsum.photos/id/1018/1920/600" alt="Image 7" />
+        </div>
+        <div class="card3">
+          <img src="https://picsum.photos/id/1018/1920/600" alt="Image 8" />
+        </div>
+        <div class="card3">
+          <img src="https://picsum.photos/id/1018/1920/600" alt="Image 9" />
+        </div>
+        <div class="card3">
+          <img src="https://picsum.photos/id/1018/1920/600" alt="Image 10" />
+        </div>
+      </div>
+    </div>
+    <!-- Helpline Center Card -->
+    <div class="body">
+      <div class="helpline-card">
+        <img src="helpline.jpg" alt="Farmer" class="card-image" />
+
+        <div class="card-content">
+          <div class="card-header">
+            <div class="card-header-left">
+              <i class="bx bxs-phone"></i>
+              <h3>Help Line</h3>
+            </div>
+            <div class="card-header-right">
+              <i class="bx bx-right-arrow-alt"></i>
+            </div>
+          </div>
+          <p>
+            Our helpline is here to support farmers and communities with quick
+            respnses
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container swiper" id="services">
+      <h1 style="padding: 20px">Our Services</h1>
+      <div class="slider-wrapper">
+        <div class="card-list swiper-wrapper">
+          <div class="card-item swiper-slide">
+            <img src="Images/buy22.avif" class="card-img" />
+            <h1 class="card-item-heading">2 + 1 Offer</h1>
+            <p class="card-item-desription">
+              Don't miss out! Buy any 2 grocery items and grab 1 for free.
+            </p>
+          </div>
+          <div class="card-item swiper-slide">
+            <img src="Images/eco.avif" class="card-img" />
+            <h1 class="card-item-heading">Eco Wrap</h1>
+            <p class="card-item-desription">
+              Our packaging is 100% recyclable and biodegradable.
+            </p>
+          </div>
+          <div class="card-item swiper-slide">
+            <img src="Images/festiv.jpg" class="card-img" />
+            <h1 class="card-item-heading">Festive packs</h1>
+            <p class="card-item-desription">
+              Festive vibes are here! Grab amazing discounts in limited-time.
+            </p>
+          </div>
+          <div class="card-item swiper-slide">
+            <img src="assets/combo.jpg" class="card-img" />
+            <h1 class="card-item-heading">Combo Packs</h1>
+            <p class="card-item-desription">
+              Big savings in small packages! Our combo deals give you more of
+              what you love for less.
+            </p>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-slider-button swiper-button-prev"></div>
+        <div class="swiper-slider-button swiper-button-next"></div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="swiper.js"></script>
+
+    <script>
+      const wtApiKey = "559e706c51965007e2174b479ade2403"; // 👉 Replace with your OpenWeather API key
+
+      function wtGetWeather(lat, lon) {
+        fetch(
+          `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${wtApiKey}&units=metric`
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            document.getElementById("wt-location").textContent = data.city.name;
+
+            // Today
+            let todayTemp = Math.round(data.list[0].main.temp);
+            let todayWeather = data.list[0].weather[0].main;
+            let todayDesc = data.list[0].weather[0].description;
+
+            document.getElementById("wt-temperature").textContent =
+              todayTemp + "°C";
+            document.getElementById("wt-emoji").textContent =
+              wtGetEmoji(todayWeather);
+            document.getElementById("wt-desc").textContent =
+              wtCapitalize(todayDesc);
+
+            // Tomorrow
+            let tomorrowTemp = Math.round(data.list[8].main.temp);
+            let tomorrowDesc = wtCapitalize(
+              data.list[8].weather[0].description
+            );
+            document.getElementById(
+              "wt-day1"
+            ).textContent = `Tomorrow: ${tomorrowTemp}°C, ${tomorrowDesc}`;
+
+            // Day After Tomorrow
+            let dayAfterTemp = Math.round(data.list[16].main.temp);
+            let dayAfterDesc = wtCapitalize(
+              data.list[16].weather[0].description
+            );
+            document.getElementById(
+              "wt-day2"
+            ).textContent = `Day After: ${dayAfterTemp}°C, ${dayAfterDesc}`;
+          })
+          .catch((err) => console.error(err));
+      }
+
+      function wtGetEmoji(weather) {
+        switch (weather) {
+          case "Clear":
+            return "☀️";
+          case "Clouds":
+            return "☁️";
+          case "Rain":
+            return "🌧️";
+          case "Snow":
+            return "❄️";
+          case "Thunderstorm":
+            return "⛈️";
+          case "Drizzle":
+            return "🌦️";
+          case "Mist":
+          case "Fog":
+            return "🌫️";
+          default:
+            return "⛅";
+        }
+      }
+
+      function wtCapitalize(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+      }
+
+      // Get Live Location
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (pos) => {
+            wtGetWeather(pos.coords.latitude, pos.coords.longitude);
+          },
+          () => {
+            document.getElementById("wt-location").textContent =
+              "Location denied";
+          }
+        );
+      } else {
+        document.getElementById("wt-location").textContent =
+          "Geolocation not supported";
+      }
+    </script>
+
+    <script>
+      const carousel = document.querySelector(".carousel-images");
+      const images = document.querySelectorAll(".carousel-images img");
+      const dots = document.querySelectorAll(".dot");
+
+      let index = 0;
+      const total = images.length;
+
+      function showImage(i) {
+        index = (i + total) % total;
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+        updateDots();
+      }
+
+      function updateDots() {
+        dots.forEach((dot, i) => {
+          dot.classList.toggle("active", i === index);
+        });
+      }
+
+      // Auto slide every 3 seconds
+      setInterval(() => showImage(index + 1), 3000);
+
+      // Dot click event
+      dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => showImage(i));
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,570 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #fff;
+  font-family: Arial, sans-serif;
+}
+/*--------------navbar-------------------*/
+nav {
+  width: 100%;
+  height: 80px;
+  position: sticky; /* stick on scroll */
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+
+  /* Glass effect with white */
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-left img {
+  height: 45px; /* Logo size */
+  width: auto;
+}
+
+.nav-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.nav-text span:first-child {
+  color: #101828; /* Dark text for contrast */
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.nav-text span:last-child {
+  color: #4b5563; /* Softer gray for subtitle */
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* Carousel wrapper */
+.carousel-container {
+  margin-top: 20px; /* top margin */
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Carousel track */
+.carousel-track {
+  display: flex;
+  width: 100%;
+  animation: scroll 12s infinite;
+}
+
+/* Each slide */
+.carousel-slide {
+  flex: 0 0 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto; /* Adjust automatically */
+  max-height: 45vh; /* Prevents images from being too tall */
+  object-fit: cover; /* Keep proportion, fill container */
+}
+
+/* Smaller screens */
+@media (max-width: 1000px) {
+  .carousel-slide img {
+    max-height: 40vh; /* Reduce height on tablets/mobiles */
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-slide img {
+    max-height: 30vh; /* Further reduce on small phones */
+  }
+}
+
+/* Keyframes for auto sliding */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(0);
+  }
+  35% {
+    transform: translateX(-100%);
+  }
+  65% {
+    transform: translateX(-100%);
+  }
+  70% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+/*-------weather--------*/
+
+.weather-tips-wrapper {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.wt-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.wt-card {
+  background: linear-gradient(180deg, #e6f7ff 25%, #ffe5b4 75%);
+
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wt-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Weather Card */
+.wt-weather-card h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #333;
+}
+.wt-today {
+  margin: 20px 0;
+}
+.wt-today-temp {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #222;
+}
+.wt-emoji {
+  font-size: 2.8rem;
+  display: block;
+}
+.wt-desc {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 5px;
+}
+.wt-forecast {
+  margin-top: 15px;
+  display: grid;
+  gap: 10px;
+}
+.wt-forecast-day {
+  background: #fff;
+  padding: 10px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Tip Card */
+.wt-tip-card {
+  flex-direction: row;
+  align-items: stretch; /* makes image full height */
+  justify-content: space-between;
+  gap: 15px;
+  text-align: left;
+}
+
+.wt-tip-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* center text vertically */
+}
+
+.wt-tip-text h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.wt-tip-text p {
+  margin: 8px 0 0;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.wt-tip-img {
+  flex-shrink: 0;
+  width: 50%; /* dynamic width instead of fixed */
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.wt-tip-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* covers full height */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .wt-container {
+    grid-template-columns: 1fr;
+  }
+  .wt-tip-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .wt-tip-img {
+    width: 100%;
+    height: 150px;
+  }
+}
+/*------------Crop manuals-------------------*/
+
+.card-wrapper2 {
+  overflow-x: auto;
+}
+
+.card-container2 {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 15px;
+  margin-left: 10px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.card-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.card2 {
+  flex: 0 0 auto;
+  background: transparent;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  width: 250px;
+}
+
+.card2:hover {
+  transform: translateY(-5px);
+}
+
+.card2 img {
+  width: 100%;
+  height: 130px;
+
+  object-fit: cover;
+}
+
+.card2 h2 {
+  padding: 15px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* Horizontal scroll on mobile */
+@media (max-width: 768px) {
+  .card-container2 {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 15px;
+    margin-left: 10px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .card2 {
+    flex: 0 0 auto;
+  }
+}
+
+/*---------------------------cards---------------------------*/
+.card-wrapper {
+  overflow-x: auto;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 15px;
+  margin-left: 10px;
+  overflow-x: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.card-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.card {
+  flex: 0 0 auto;
+  background: transparent;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  width: 200px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+
+  object-fit: cover;
+}
+.card .top-img {
+  width: 100%;
+  height: 160px;
+
+  object-fit: cover;
+}
+
+.card h2 {
+  padding: 15px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* Horizontal scroll on mobile */
+@media (max-width: 768px) {
+  .card-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 15px;
+    margin-left: 10px;
+    overflow-x: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
+
+  .card {
+    flex: 0 0 auto;
+  }
+}
+
+/*-----------magazines-----------------*/
+.card-wrapper2 {
+  overflow-x: auto;
+}
+
+.card-container2 {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 15px;
+  margin-left: 10px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.card-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.card3 {
+  flex: 0 0 auto;
+  background: transparent;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  width: 150px;
+}
+
+.card3:hover {
+  transform: translateY(-5px);
+}
+
+.card3 img {
+  width: 100%;
+  height: 180px;
+
+  object-fit: cover;
+}
+
+.card2 h2 {
+  padding: 15px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* Horizontal scroll on mobile */
+@media (max-width: 768px) {
+  .card-container2 {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 15px;
+    margin-left: 10px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .card2 {
+    flex: 0 0 auto;
+  }
+}
+
+/*--------------------- Center Wrapper-------------- */
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  background: #f4f6fa;
+  font-family: "Poppins", sans-serif;
+}
+
+.helpline-card {
+  background: #fff;
+  border-radius: 20px;
+  max-width: 350px;
+  width: 100%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.helpline-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-header-left i {
+  font-size: 28px;
+  color: #2563eb;
+  background: #e0ebff;
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.card-header-left h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 600;
+  color: #111827;
+}
+
+.card-header-right i {
+  font-size: 26px;
+  color: #2563eb;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card-header-right i:hover {
+  transform: translateX(5px);
+}
+
+.card-content p {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .helpline-card {
+    max-width: 90%;
+  }
+  .card-image {
+    height: 150px;
+  }
+}
+/*---------------slider--------------*/
+.slider-wrapper {
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 75px 55px;
+}
+.card-list .card-item {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
+  padding: 35px;
+  border-radius: 8px;
+}
+.card-list .card-item .card-img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 40px;
+  border: 3px;
+  padding: 4px;
+}
+.card-item .card-item-desription {
+  margin-top: 10px;
+  text-align: center;
+}
+.card-item-heading {
+  margin-top: 2px;
+}
+.swiper-slider-button {
+  color: black;
+}
+@media screen and (max-width: 800px) {
+  .slider-wrapper {
+    margin: 0 10px 40px;
+  }
+  .swiper-slider-button {
+    display: none;
+  }
+}
